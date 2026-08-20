@@ -28,6 +28,56 @@ enum CraftConnectConfig {
     }
 }
 
+/// When and whether the face routine / calendar / Craft data auto-refreshes
+/// in the background, user-adjustable from the Connections screen (default:
+/// every morning at 2am). Read by both the app (to schedule the background
+/// task) and the widget extension (to target its own timeline reload at the
+/// same moment, since the OS doesn't guarantee the background task runs
+/// exactly on time).
+enum RefreshScheduleConfig {
+    private static let hourKey = "refreshHour"
+    private static let minuteKey = "refreshMinute"
+    private static let enabledKey = "refreshAutoEnabled"
+
+    static var hour: Int {
+        get { AppGroup.defaults.object(forKey: hourKey) as? Int ?? 2 }
+        set { AppGroup.defaults.set(newValue, forKey: hourKey) }
+    }
+
+    static var minute: Int {
+        get { AppGroup.defaults.object(forKey: minuteKey) as? Int ?? 0 }
+        set { AppGroup.defaults.set(newValue, forKey: minuteKey) }
+    }
+
+    static var isEnabled: Bool {
+        get { AppGroup.defaults.object(forKey: enabledKey) as? Bool ?? true }
+        set { AppGroup.defaults.set(newValue, forKey: enabledKey) }
+    }
+
+    /// The stored hour/minute expressed as today's `Date`, for binding to a
+    /// SwiftUI `DatePicker(.hourAndMinute)` — only the time-of-day components
+    /// are ever read back out of it.
+    static func storedTimeToday() -> Date {
+        var components = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+        components.hour = hour
+        components.minute = minute
+        return Calendar.current.date(from: components) ?? Date()
+    }
+
+    /// The next occurrence of the configured hour/minute strictly after
+    /// `date` — today's if it hasn't passed yet, otherwise tomorrow's.
+    static func nextRefreshDate(after date: Date = Date()) -> Date {
+        let calendar = Calendar.current
+        var components = calendar.dateComponents([.year, .month, .day], from: date)
+        components.hour = hour
+        components.minute = minute
+        components.second = 0
+        let todayCandidate = calendar.date(from: components) ?? date
+        if todayCandidate > date { return todayCandidate }
+        return calendar.date(byAdding: .day, value: 1, to: todayCandidate) ?? date.addingTimeInterval(86400)
+    }
+}
+
 // MARK: - Calendar snapshot (written by the app after an EventKit sync, read by the widgets)
 
 struct CalendarEventSummary: Codable, Identifiable {

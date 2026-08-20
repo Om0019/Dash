@@ -24,6 +24,7 @@
 		AAAA8888AAAA8888AAAA8888 /* CraftService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9999AAAA9999AAAA9999 /* CraftService.swift */; };
 		BBBB1111BBBB1111BBBB1111 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB2222BBBB2222BBBB2222 /* SettingsView.swift */; };
 		BBBB3333BBBB3333BBBB3333 /* DashboardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB4444BBBB4444BBBB4444 /* DashboardStyle.swift */; };
+		CCCC1111CCCC1111CCCC1111 /* BackgroundRefreshService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCC2222CCCC2222CCCC2222 /* BackgroundRefreshService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		BBBB4444BBBB4444BBBB4444 /* DashboardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardStyle.swift; sourceTree = "<group>"; };
 		AAAA6666AAAA6666AAAA6666 /* Dash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dash.entitlements; sourceTree = "<group>"; };
 		AAAA7777AAAA7777AAAA7777 /* OrlandoWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrlandoWidgets.entitlements; sourceTree = "<group>"; };
+		CCCC2222CCCC2222CCCC2222 /* BackgroundRefreshService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRefreshService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				AAAA9999AAAA9999AAAA9999 /* CraftService.swift */,
 				BBBB2222BBBB2222BBBB2222 /* SettingsView.swift */,
 				BBBB4444BBBB4444BBBB4444 /* DashboardStyle.swift */,
+				CCCC2222CCCC2222CCCC2222 /* BackgroundRefreshService.swift */,
 				EBC90F65EE7394EB1FABF513 /* Assets.xcassets */,
 				8B50FA9F2B121C2D675DB326 /* Info.plist */,
 				AAAA6666AAAA6666AAAA6666 /* Dash.entitlements */,
@@ -270,6 +273,7 @@
 				AAAA8888AAAA8888AAAA8888 /* CraftService.swift in Sources */,
 				BBBB1111BBBB1111BBBB1111 /* SettingsView.swift in Sources */,
 				BBBB3333BBBB3333BBBB3333 /* DashboardStyle.swift in Sources */,
+				CCCC1111CCCC1111CCCC1111 /* BackgroundRefreshService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

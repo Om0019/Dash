@@ -37,6 +37,7 @@ struct ContentView: View {
             async let calendarSync: Void = calendarService.authState == .authorized ? calendarService.sync() : ()
             async let craftSync: Void = craftService.sync()
             _ = await (calendarSync, craftSync)
+            BackgroundRefreshService.scheduleNext()
         }
     }
 
