@@ -16,7 +16,14 @@ struct DashboardProvider: TimelineProvider {
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<DashboardEntry>) -> Void) {
         let now = Date()
-        let nextRefresh = Calendar.current.date(byAdding: .day, value: 1, to: now) ?? now.addingTimeInterval(86400)
+        // Targets the same user-configured time the app's background task
+        // refreshes at (default 2am, see RefreshScheduleConfig) rather than
+        // a flat "+1 day from whenever this happened to render" — the app's
+        // BGAppRefreshTask is the primary driver (it can push fresh data via
+        // WidgetCenter.reloadAllTimelines() while this widget is dormant),
+        // this timeline policy is the fallback in case that task gets
+        // skipped by the system.
+        let nextRefresh = RefreshScheduleConfig.nextRefreshDate(after: now)
         let timeline = Timeline(entries: [DashboardEntry(date: now)], policy: .after(nextRefresh))
         completion(timeline)
     }

@@ -37,6 +37,7 @@ struct ContentView: View {
             async let calendarSync: Void = calendarService.authState == .authorized ? calendarService.sync() : ()
             async let craftSync: Void = craftService.sync()
             _ = await (calendarSync, craftSync)
+            BackgroundRefreshService.scheduleNext()
         }
     }
 
@@ -156,7 +157,7 @@ struct ContentView: View {
 
                 Callout {
                     (Text("How to apply: ").fontWeight(.semibold).foregroundStyle(.white)
-                     + Text("cleanser first, then treatments thinnest-to-thickest (Vitamin C serum, then salicylic acid spot-treated on the nose), moisturizer last. Let each layer sit ~1 min before the next. AM moisturizer has SPF 30 built in — no separate sunscreen needed."))
+                     + Text("cleanser first, then treatments thinnest-to-thickest (Vitamin C exfoliating serum, then salicylic acid spot-treated on the nose), moisturizer last. Let each layer sit ~1 min before the next. AM moisturizer has SPF 30 built in — no separate sunscreen needed. Vitamin C and salicylic acid aren't nightly — check today's PM column for what's actually scheduled."))
                 }
             }
         }

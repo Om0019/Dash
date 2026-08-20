@@ -8,6 +8,9 @@ struct SettingsView: View {
     @State private var craftURLText: String = CraftConnectConfig.urlString ?? ""
     @State private var isEditingCraftURL: Bool = CraftConnectConfig.urlString == nil
 
+    @State private var autoRefreshEnabled: Bool = RefreshScheduleConfig.isEnabled
+    @State private var refreshTime: Date = RefreshScheduleConfig.storedTimeToday()
+
     private var calendarsBySource: [(source: String, calendars: [EKCalendar])] {
         Dictionary(grouping: calendarService.availableCalendars) { $0.source.title }
             .sorted { $0.key < $1.key }
@@ -30,6 +33,7 @@ struct SettingsView: View {
                         calendarPickerSections
                     }
                     craftSection
+                    autoRefreshSection
                 }
                 .padding(.horizontal, 18)
                 // Clears the floating back button.
@@ -169,6 +173,56 @@ struct SettingsView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 14)
                     .padding(.vertical, 10)
+            }
+        }
+    }
+
+    // MARK: - Auto-refresh
+
+    private var autoRefreshSection: some View {
+        SettingsSection(
+            title: "Auto-refresh",
+            footer: "Refreshes your face routine, calendar, and Craft data in the background so the app and its widgets are up to date when you wake up. iOS decides the exact minute it runs within its own budget."
+        ) {
+            Toggle(isOn: Binding(
+                get: { autoRefreshEnabled },
+                set: { newValue in
+                    autoRefreshEnabled = newValue
+                    RefreshScheduleConfig.isEnabled = newValue
+                    BackgroundRefreshService.scheduleNext()
+                }
+            )) {
+                Text("Refresh every morning")
+                    .font(.system(size: 13.5))
+                    .foregroundStyle(.white)
+            }
+            .tint(Color.dashboardAccent)
+            .padding(.horizontal, 14)
+            .padding(.vertical, 10)
+
+            if autoRefreshEnabled {
+                RowDivider()
+
+                DatePicker(
+                    "Time",
+                    selection: Binding(
+                        get: { refreshTime },
+                        set: { newValue in
+                            refreshTime = newValue
+                            let components = Calendar.current.dateComponents([.hour, .minute], from: newValue)
+                            RefreshScheduleConfig.hour = components.hour ?? 2
+                            RefreshScheduleConfig.minute = components.minute ?? 0
+                            BackgroundRefreshService.scheduleNext()
+                        }
+                    ),
+                    displayedComponents: .hourAndMinute
+                )
+                .datePickerStyle(.compact)
+                .tint(Color.dashboardAccent)
+                .font(.system(size: 13.5))
+                .foregroundStyle(.white)
+                .padding(.horizontal, 14)
+                .padding(.vertical, 10)
             }
         }
     }
