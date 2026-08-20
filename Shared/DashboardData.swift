@@ -67,20 +67,35 @@ enum DashboardData {
         return event.startDate.formatted(.dateTime.weekday(.abbreviated).month(.abbreviated).day())
     }
 
-    // MARK: - Skincare routine (static)
+    // MARK: - Skincare routine (weekly schedule — see the "Weekly Face
+    // Routine Schedule" note in Craft)
 
+    /// AM steps don't vary by day.
     static let amRoutine: [RoutineStep] = [
         RoutineStep(step: 1, name: "Cleanser"),
         RoutineStep(step: 2, name: "Caffeine eye gel"),
         RoutineStep(step: 3, name: "Moisturizer AM (SPF 30)"),
     ]
 
-    static let pmRoutine: [RoutineStep] = [
-        RoutineStep(step: 1, name: "Cleanser"),
-        RoutineStep(step: 2, name: "Vitamin C serum"),
-        RoutineStep(step: 3, name: "Salicylic acid (nose only)"),
-        RoutineStep(step: 4, name: "Moisturizer PM"),
+    /// PM extras beyond cleanser/moisturizer, keyed by
+    /// `Calendar.current.component(.weekday, from:)` (1 = Sunday ... 7 =
+    /// Saturday): Vitamin C serum lands Tue/Thu, salicylic acid lands
+    /// Tue/Thu/Sat/Sun.
+    private static let pmExtrasByWeekday: [Int: [String]] = [
+        1: ["Salicylic acid (nose only)"],                                // Sun
+        2: [],                                                            // Mon
+        3: ["Vitamin C exfoliating serum", "Salicylic acid (nose only)"], // Tue
+        4: [],                                                            // Wed
+        5: ["Vitamin C exfoliating serum", "Salicylic acid (nose only)"], // Thu
+        6: [],                                                            // Fri
+        7: ["Salicylic acid (nose only)"],                                // Sat
     ]
+
+    static var pmRoutine: [RoutineStep] {
+        let weekday = Calendar.current.component(.weekday, from: .now)
+        let names = ["Cleanser"] + (pmExtrasByWeekday[weekday] ?? []) + ["Moisturizer PM"]
+        return names.enumerated().map { RoutineStep(step: $0.offset + 1, name: $0.element) }
+    }
 
     // MARK: - Craft (live via CraftService — see CraftService.swift)
 
