@@ -1,0 +1,32 @@
+{
+  "name": "Dash",
+  "identifier": "com.orlando.dash.altstore-source",
+  "sourceURL": "https://raw.githubusercontent.com/Om0019/Dash/main/apps.json",
+  "apps": [
+    {
+      "name": "Dash",
+      "bundleIdentifier": "com.orlando.dash",
+      "developerName": "Orlando",
+      "subtitle": "Home Screen widgets for the Orlando dashboard",
+      "localizedDescription": "A SwiftUI companion app and WidgetKit extension that brings the Orlando dashboard to the iOS Home Screen as widgets.",
+      "iconURL": "https://raw.githubusercontent.com/Om0019/Dash/main/Dash/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png",
+      "tintColor": "000000",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-08-20T17:19:32Z",
+          "size": 2749625,
+          "sha256": "73d973e2b8f5464474d968876708a466de0a22e001fb632d477b7a9470937f87",
+          "downloadURL": "https://github.com/Om0019/Dash/releases/download/v1.0.0/Dash.ipa",
+          "localizedDescription": "First unsigned build for AltStore/SideStore.",
+          "minOSVersion": "17.0"
+        }
+      ],
+      "version": "1.0.0",
+      "versionDate": "2026-08-20T17:19:32Z",
+      "size": 2749625,
+      "sha256": "73d973e2b8f5464474d968876708a466de0a22e001fb632d477b7a9470937f87",
+      "downloadURL": "https://github.com/Om0019/Dash/releases/download/v1.0.0/Dash.ipa"
+    }
+  ]
+}

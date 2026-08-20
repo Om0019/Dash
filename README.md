@@ -8,6 +8,33 @@ A small SwiftUI companion app plus a WidgetKit extension that brings the
 Open `Dash.xcodeproj` in Xcode 15+ and run the `Dash`
 scheme on an iOS 17+ simulator or device.
 
+## Installing without a paid developer account (AltStore/SideStore)
+
+No Apple Developer account is required to install this on your own device.
+Every push of a `vX.Y.Z` tag runs [`.github/workflows/release.yml`](.github/workflows/release.yml),
+which builds an **unsigned** `Dash.ipa` (via [`scripts/build_ipa.sh`](scripts/build_ipa.sh)),
+attaches it to a [GitHub Release](https://github.com/Om0019/Dash/releases),
+and updates [`apps.json`](apps.json) — an AltStore/SideStore source manifest
+— with the new version, size, and checksum.
+
+To install:
+
+1. Install [AltStore](https://altstore.io) or [SideStore](https://sidestore.io)
+   and pair it with your computer (a free Apple ID is enough — it just needs
+   re-signing every 7 days).
+2. In AltStore/SideStore, add this source:
+   ```
+   https://raw.githubusercontent.com/Om0019/Dash/main/apps.json
+   ```
+3. Install **Dash** from the source. AltServer/SideServer signs the unsigned
+   IPA locally with your Apple ID at install time — that's what makes a free
+   account work.
+
+To cut a new release yourself: `git tag v1.0.1 && git push origin v1.0.1`.
+Or run `./scripts/build_ipa.sh` locally to build `Dash.ipa` without touching
+GitHub at all (useful for sideloading via Xcode or AltServer's drag-and-drop
+install without going through a release).
+
 ## What's included
 
 - **Dash** — the container app. It requests Calendar access,
