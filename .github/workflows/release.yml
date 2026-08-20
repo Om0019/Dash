@@ -1,0 +1,82 @@
+name: Build and release unsigned IPA
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to build (e.g. 1.0.1)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve version
+        id: version
+        run: |
+          if [[ -n "${{ github.event.inputs.version }}" ]]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION="${GITHUB_REF_NAME#v}"
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Build unsigned IPA
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: ./scripts/build_ipa.sh
+
+      - name: Compute release metadata
+        id: meta
+        run: |
+          SIZE=$(stat -f%z Dash.ipa)
+          SHA256=$(shasum -a 256 Dash.ipa | cut -d' ' -f1)
+          DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          echo "size=$SIZE" >> "$GITHUB_OUTPUT"
+          echo "sha256=$SHA256" >> "$GITHUB_OUTPUT"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="${{ steps.version.outputs.tag }}"
+          if ! git rev-parse "$TAG" >/dev/null 2>&1; then
+            git tag "$TAG"
+            git push origin "$TAG"
+          fi
+          gh release create "$TAG" Dash.ipa \
+            --title "Dash $TAG" \
+            --notes "Unsigned build for AltStore/SideStore sideloading." \
+            --repo "${{ github.repository }}" || \
+          gh release upload "$TAG" Dash.ipa --clobber --repo "${{ github.repository }}"
+
+      - name: Update AltStore manifest
+        run: |
+          python3 scripts/update_manifest.py \
+            --version "${{ steps.version.outputs.version }}" \
+            --date "${{ steps.meta.outputs.date }}" \
+            --size "${{ steps.meta.outputs.size }}" \
+            --sha256 "${{ steps.meta.outputs.sha256 }}" \
+            --download-url "https://github.com/${{ github.repository }}/releases/download/${{ steps.version.outputs.tag }}/Dash.ipa"
+
+      - name: Commit manifest update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update apps.json for ${{ steps.version.outputs.tag }}"
+            git push origin HEAD:main
+          fi

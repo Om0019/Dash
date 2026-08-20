@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		287E050AF08853C79C573B39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC90F65EE7394EB1FABF513 /* Assets.xcassets */; };
+		38EDE1038CFD3FE5DBFCAE35 /* OrlandoWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8CFB7521388AE1BB84CA5C64 /* OrlandoWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		551220306C4072FAD182C3C8 /* AssignmentsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C5A5A50E3D29FE879D2156 /* AssignmentsWidget.swift */; };
+		57B5BAB5B256B545AD6BC266 /* RoutineWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09B6810A99E99716B805997E /* RoutineWidget.swift */; };
+		5BBB5C4D3764A998B939E084 /* DashboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DAE2410D3E391942F8B88A /* DashboardData.swift */; };
+		61FDF894A54CC4E25B24FAEE /* OrlandoWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFBD8E77FC56FE0716545D /* OrlandoWidgetsBundle.swift */; };
+		8987FCCC893F1C058F5E4C6A /* FoldersWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41CB664D061D28548B876CF3 /* FoldersWidget.swift */; };
+		BF734362CD0EDE4D99DD3C13 /* DashboardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DAE2410D3E391942F8B88A /* DashboardData.swift */; };
+		E1D7D1E65E091E651C49CEAE /* StatsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3492EEC1A98FD0D7D6FC35D /* StatsWidget.swift */; };
+		F81E75243B9A34FFCD1D348F /* DashApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA8A0F4493980970FF69EEB /* DashApp.swift */; };
+		FC82713BA90D3DDA973D47A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102994B23D6F034BAE4BB230 /* ContentView.swift */; };
+		AAAA2222AAAA2222AAAA2222 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA1111AAAA1111AAAA1111 /* AppGroup.swift */; };
+		AAAA3333AAAA3333AAAA3333 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA1111AAAA1111AAAA1111 /* AppGroup.swift */; };
+		AAAA5555AAAA5555AAAA5555 /* CalendarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA4444AAAA4444AAAA4444 /* CalendarService.swift */; };
+		AAAA8888AAAA8888AAAA8888 /* CraftService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA9999AAAA9999AAAA9999 /* CraftService.swift */; };
+		BBBB1111BBBB1111BBBB1111 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB2222BBBB2222BBBB2222 /* SettingsView.swift */; };
+		BBBB3333BBBB3333BBBB3333 /* DashboardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB4444BBBB4444BBBB4444 /* DashboardStyle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A52ACD1FC0CD1A0A2861FEB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BF44414387E014EE51D1A08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C69611E55D3F5360F306DC21;
+			remoteInfo = OrlandoWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9062D8EAAF685511D8BCD19 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				38EDE1038CFD3FE5DBFCAE35 /* OrlandoWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09454634805BBF429E0EA90F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09B6810A99E99716B805997E /* RoutineWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineWidget.swift; sourceTree = "<group>"; };
+		09C5A5A50E3D29FE879D2156 /* AssignmentsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsWidget.swift; sourceTree = "<group>"; };
+		102994B23D6F034BAE4BB230 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35EFBD8E77FC56FE0716545D /* OrlandoWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrlandoWidgetsBundle.swift; sourceTree = "<group>"; };
+		41CB664D061D28548B876CF3 /* FoldersWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersWidget.swift; sourceTree = "<group>"; };
+		53980D3D6F5D98812076BE81 /* Dash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B50FA9F2B121C2D675DB326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CFB7521388AE1BB84CA5C64 /* OrlandoWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OrlandoWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3492EEC1A98FD0D7D6FC35D /* StatsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsWidget.swift; sourceTree = "<group>"; };
+		B7DAE2410D3E391942F8B88A /* DashboardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardData.swift; sourceTree = "<group>"; };
+		EBC90F65EE7394EB1FABF513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEA8A0F4493980970FF69EEB /* DashApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashApp.swift; sourceTree = "<group>"; };
+		AAAA1111AAAA1111AAAA1111 /* AppGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppGroup.swift; sourceTree = "<group>"; };
+		AAAA4444AAAA4444AAAA4444 /* CalendarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarService.swift; sourceTree = "<group>"; };
+		AAAA9999AAAA9999AAAA9999 /* CraftService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraftService.swift; sourceTree = "<group>"; };
+		BBBB2222BBBB2222BBBB2222 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BBBB4444BBBB4444BBBB4444 /* DashboardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardStyle.swift; sourceTree = "<group>"; };
+		AAAA6666AAAA6666AAAA6666 /* Dash.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dash.entitlements; sourceTree = "<group>"; };
+		AAAA7777AAAA7777AAAA7777 /* OrlandoWidgets.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrlandoWidgets.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		271F358E9722CADE61F91F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C50033037D14EF30D5AB3DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03FC2D9C91D74E9390491863 /* Dash */ = {
+			isa = PBXGroup;
+			children = (
+				EEA8A0F4493980970FF69EEB /* DashApp.swift */,
+				102994B23D6F034BAE4BB230 /* ContentView.swift */,
+				AAAA4444AAAA4444AAAA4444 /* CalendarService.swift */,
+				AAAA9999AAAA9999AAAA9999 /* CraftService.swift */,
+				BBBB2222BBBB2222BBBB2222 /* SettingsView.swift */,
+				BBBB4444BBBB4444BBBB4444 /* DashboardStyle.swift */,
+				EBC90F65EE7394EB1FABF513 /* Assets.xcassets */,
+				8B50FA9F2B121C2D675DB326 /* Info.plist */,
+				AAAA6666AAAA6666AAAA6666 /* Dash.entitlements */,
+			);
+			path = Dash;
+			sourceTree = "<group>";
+		};
+		37CA0AEB777F2BE8BABFC650 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53980D3D6F5D98812076BE81 /* Dash.app */,
+				8CFB7521388AE1BB84CA5C64 /* OrlandoWidgetsExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43689E2D57A88E61BCE11BAD /* OrlandoWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				35EFBD8E77FC56FE0716545D /* OrlandoWidgetsBundle.swift */,
+				A3492EEC1A98FD0D7D6FC35D /* StatsWidget.swift */,
+				09C5A5A50E3D29FE879D2156 /* AssignmentsWidget.swift */,
+				09B6810A99E99716B805997E /* RoutineWidget.swift */,
+				41CB664D061D28548B876CF3 /* FoldersWidget.swift */,
+				09454634805BBF429E0EA90F /* Info.plist */,
+				AAAA7777AAAA7777AAAA7777 /* OrlandoWidgets.entitlements */,
+			);
+			path = OrlandoWidgets;
+			sourceTree = "<group>";
+		};
+		794294B50B2623C3913678CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B7DAE2410D3E391942F8B88A /* DashboardData.swift */,
+				AAAA1111AAAA1111AAAA1111 /* AppGroup.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		87118272C25034D2AB6C4C8A = {
+			isa = PBXGroup;
+			children = (
+				03FC2D9C91D74E9390491863 /* Dash */,
+				43689E2D57A88E61BCE11BAD /* OrlandoWidgets */,
+				794294B50B2623C3913678CF /* Shared */,
+				37CA0AEB777F2BE8BABFC650 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		509AC0702BE4F597CA44170D /* Dash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 345AF63D055FE8FCF8C13B67 /* Build configuration list for PBXNativeTarget "Dash" */;
+			buildPhases = (
+				713BB17E3A100EDC13D82B83 /* Sources */,
+				271F358E9722CADE61F91F24 /* Frameworks */,
+				B37A8EA72D816FCFBCCB3883 /* Resources */,
+				D9062D8EAAF685511D8BCD19 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CA4D24F8A69FC31B99F83E1 /* PBXTargetDependency */,
+			);
+			name = Dash;
+			productName = Dash;
+			productReference = 53980D3D6F5D98812076BE81 /* Dash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C69611E55D3F5360F306DC21 /* OrlandoWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C481B50DEF6812DFEAB18EB /* Build configuration list for PBXNativeTarget "OrlandoWidgetsExtension" */;
+			buildPhases = (
+				3F8BAFAFB7E50B4138C1969D /* Sources */,
+				3C50033037D14EF30D5AB3DA /* Frameworks */,
+				479CE8E5EDC0D937F630672F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrlandoWidgetsExtension;
+			productName = OrlandoWidgetsExtension;
+			productReference = 8CFB7521388AE1BB84CA5C64 /* OrlandoWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BF44414387E014EE51D1A08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					509AC0702BE4F597CA44170D = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					C69611E55D3F5360F306DC21 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 3183E721BB73146F3C2CE285 /* Build configuration list for PBXProject "Dash" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87118272C25034D2AB6C4C8A;
+			productRefGroup = 37CA0AEB777F2BE8BABFC650 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				509AC0702BE4F597CA44170D /* Dash */,
+				C69611E55D3F5360F306DC21 /* OrlandoWidgetsExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		479CE8E5EDC0D937F630672F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37A8EA72D816FCFBCCB3883 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287E050AF08853C79C573B39 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F8BAFAFB7E50B4138C1969D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61FDF894A54CC4E25B24FAEE /* OrlandoWidgetsBundle.swift in Sources */,
+				E1D7D1E65E091E651C49CEAE /* StatsWidget.swift in Sources */,
+				551220306C4072FAD182C3C8 /* AssignmentsWidget.swift in Sources */,
+				57B5BAB5B256B545AD6BC266 /* RoutineWidget.swift in Sources */,
+				8987FCCC893F1C058F5E4C6A /* FoldersWidget.swift in Sources */,
+				BF734362CD0EDE4D99DD3C13 /* DashboardData.swift in Sources */,
+				AAAA3333AAAA3333AAAA3333 /* AppGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		713BB17E3A100EDC13D82B83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F81E75243B9A34FFCD1D348F /* DashApp.swift in Sources */,
+				FC82713BA90D3DDA973D47A7 /* ContentView.swift in Sources */,
+				5BBB5C4D3764A998B939E084 /* DashboardData.swift in Sources */,
+				AAAA2222AAAA2222AAAA2222 /* AppGroup.swift in Sources */,
+				AAAA5555AAAA5555AAAA5555 /* CalendarService.swift in Sources */,
+				AAAA8888AAAA8888AAAA8888 /* CraftService.swift in Sources */,
+				BBBB1111BBBB1111BBBB1111 /* SettingsView.swift in Sources */,
+				BBBB3333BBBB3333BBBB3333 /* DashboardStyle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CA4D24F8A69FC31B99F83E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C69611E55D3F5360F306DC21 /* OrlandoWidgetsExtension */;
+			targetProxy = A52ACD1FC0CD1A0A2861FEB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		52026DF1D6E1906326FD45B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		5CC844AEE0C72031D8D2FD16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dash/Dash.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BTA747885K;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Dash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orlando.dash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64D3BAB1B8E761A7A6D6F304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64D803542D416822828CF1D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dash/Dash.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BTA747885K;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Dash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orlando.dash;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		97603C62711BA7AD5B86058F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OrlandoWidgets/OrlandoWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BTA747885K;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OrlandoWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orlando.dash.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E706D78D9E8212D2A1201AA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = OrlandoWidgets/OrlandoWidgets.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BTA747885K;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = OrlandoWidgets/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orlando.dash.widgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3183E721BB73146F3C2CE285 /* Build configuration list for PBXProject "Dash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52026DF1D6E1906326FD45B9 /* Debug */,
+				64D3BAB1B8E761A7A6D6F304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		345AF63D055FE8FCF8C13B67 /* Build configuration list for PBXNativeTarget "Dash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC844AEE0C72031D8D2FD16 /* Debug */,
+				64D803542D416822828CF1D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C481B50DEF6812DFEAB18EB /* Build configuration list for PBXNativeTarget "OrlandoWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E706D78D9E8212D2A1201AA4 /* Debug */,
+				97603C62711BA7AD5B86058F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BF44414387E014EE51D1A08 /* Project object */;
+}
